@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Permission;
+use App\Permission;
 use Illuminate\Database\Seeder;
 
 class PermissionSeeder extends Seeder
@@ -64,8 +64,6 @@ class PermissionSeeder extends Seeder
 
         ];
 
-        foreach ($items as $item) {
-            Permission::create($item);
-        }
+        
     }
 }

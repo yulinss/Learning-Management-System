@@ -22,8 +22,6 @@ class RoleSeeder extends Seeder
 
         ];
 
-        foreach($items as $item){
-            Role::create($item);
-        }
+        
     }
 }

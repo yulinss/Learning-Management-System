@@ -28,12 +28,6 @@ class RolePivotSeeder extends Seeder
 
         ];
 
-        foreach ($items as $id => $item) {
-            $role = Role::find($id);
-
-            foreach ($item as $key => $ids) {
-                $role->{$key}()->sync($ids);
-            }
-        }
+        
     }
 }

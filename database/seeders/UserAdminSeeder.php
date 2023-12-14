@@ -20,8 +20,6 @@ class UserAdminSeeder extends Seeder
 
         ];
 
-        foreach ($items as $item) {
-            User::create($item);
-        }
+        
     }
 }
