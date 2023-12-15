@@ -9,6 +9,7 @@ class Role extends Model
 {
     use HasFactory;
 
+    protected $table = "tbl_roles";
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function permission()
