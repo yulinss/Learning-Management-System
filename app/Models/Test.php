@@ -10,7 +10,7 @@ class Test extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $guarded = ['id', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'created_at', 'updated_at'];
 
     public function course()
     {

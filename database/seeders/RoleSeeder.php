@@ -14,13 +14,13 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        $items = [
+        Role::create ([
             
-            ['id' => 1, 'title' => 'Administrator (can create other users)',],
-            ['id' => 2, 'title' => 'Teacher',],
-            ['id' => 3, 'title' => 'Student',],
+            'id' => 1, 'title' => 'Administrator (can create other users)',
+            'id' => 2, 'title' => 'Teacher',
+            'id' => 3, 'title' => 'Student',
 
-        ];
+        ]);
 
         
     }

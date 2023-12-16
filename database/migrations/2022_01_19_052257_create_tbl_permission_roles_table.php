@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblPermissionRoleTable extends Migration
+class CreateTblPermissionRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTblPermissionRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_permission_role', function (Blueprint $table) {
+        Schema::create('tbl_permission_roles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('permission_id')->nullable();
             $table->unsignedBigInteger('role_id')->nullable();
@@ -30,6 +30,6 @@ class CreateTblPermissionRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_permission_role');
+        Schema::dropIfExists('tbl_permission_roles');
     }
 }

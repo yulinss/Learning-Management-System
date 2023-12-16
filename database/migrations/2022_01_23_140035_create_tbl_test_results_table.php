@@ -19,7 +19,7 @@ class CreateTblTestResultsTable extends Migration
             $table->foreign('test_id')->references('id')->on('tbl_tests')->onDelete('cascade');
             
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('tbl_users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('tbl_penggunans')->onDelete('cascade');
             
             $table->integer('test_result');
             $table->timestamps();

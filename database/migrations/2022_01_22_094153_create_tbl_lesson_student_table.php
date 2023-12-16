@@ -19,7 +19,7 @@ class CreateTblLessonStudentTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
             $table->foreign('lesson_id')->references('id')->on('tbl_lessons')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('tbl_users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('tbl_penggunans')->onDelete('cascade');
         });
     }
 

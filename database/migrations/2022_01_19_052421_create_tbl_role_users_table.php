@@ -18,7 +18,7 @@ class CreateTblRoleUsersTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('role_id')->nullable();
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('tbl_users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('tbl_penggunans')->onDelete('cascade');
             $table->foreign('role_id')->references('id')->on('tbl_roles')->onDelete('cascade');
         });
     }
@@ -30,6 +30,6 @@ class CreateTblRoleUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_role_user');
+        Schema::dropIfExists('tbl_role_users');
     }
 }
