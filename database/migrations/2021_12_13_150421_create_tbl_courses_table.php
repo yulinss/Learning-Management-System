@@ -34,6 +34,6 @@ class CreateTblCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_courses');
+        Schema::dropIfExists('courses');
     }
 }

@@ -15,8 +15,7 @@ class CreateTblLessonsTable extends Migration
     {
         Schema::create('tbl_lessons', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('course_id');
-            $table->foreign('course_id')->references('id')->on('tbl_courses')->onDelete('cascade');
+            $table->foreignId('course_id')->constrained('tbl_courses')->cascadeOnDelete();
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
             $table->string('embed_id')->nullable();
@@ -37,6 +36,6 @@ class CreateTblLessonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_lessons');
+        Schema::dropIfExists('lessons');
     }
 }

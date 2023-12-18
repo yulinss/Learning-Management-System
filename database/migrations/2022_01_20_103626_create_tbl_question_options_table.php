@@ -14,13 +14,13 @@ class CreateTblQuestionOptionsTable extends Migration
     public function up()
     {
         Schema::create('tbl_question_options', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('question_id')->nullable();
+            $table->id();
+            $table->foreignId('question_id')->nullable()->constrained('tbl_questions')->cascadeOnDelete();
             $table->text('option_text');
             $table->tinyInteger('correct')->nullable()->default(0);
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('question_id')->references('id')->on('tbl_questions')->onDelete('cascade');
+
             $table->index(['deleted_at']);
         });
     }
@@ -32,6 +32,6 @@ class CreateTblQuestionOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_question_options');
+        Schema::dropIfExists('question_options');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddTblRatingToCourseStudentTable extends Migration
+class CreatePermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddTblRatingToCourseStudentTable extends Migration
      */
     public function up()
     {
-        Schema::table('tbl_course_student', function (Blueprint $table) {
-            $table->integer('rating')->unsigned()->default(0)->after('user_id');
+        Schema::create('permissions', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddTblRatingToCourseStudentTable extends Migration
      */
     public function down()
     {
-        Schema::table('tbl_course_student', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('permissions');
     }
 }

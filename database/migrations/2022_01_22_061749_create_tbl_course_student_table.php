@@ -14,12 +14,10 @@ class CreateTblCourseStudentTable extends Migration
     public function up()
     {
         Schema::create('tbl_course_student', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('course_id')->nullable();
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->id();
+            $table->foreignId('course_id')->nullable()->constrained('tbl_courses')->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnDelete();
             $table->timestamps();
-            $table->foreign('course_id')->references('id')->on('tbl_courses')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('tbl_penggunans')->onDelete('cascade');
         });
     }
 
@@ -30,6 +28,6 @@ class CreateTblCourseStudentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_course_student');
+        Schema::dropIfExists('course_student');
     }
 }

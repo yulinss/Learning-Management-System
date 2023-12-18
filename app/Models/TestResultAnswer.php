@@ -9,5 +9,7 @@ class TestResultAnswer extends Model
 {
     use HasFactory;
 
+    protected $table = 'tbl_test_result_answer';
+
     protected $fillable = ['test_result_id', 'question_id', 'question_option_id', 'correct'];
 }

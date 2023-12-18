@@ -14,12 +14,14 @@ class UserAdminSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        $items = [
             
-            'id' => 1, 'name' => 'admin', 'email' => 'admin@example.com', 'password' => bcrypt('123'), 'remember_token' => '',
+            ['id' => 1, 'name' => 'admin', 'email' => 'admin@example.com', 'password' => bcrypt('123'), 'remember_token' => '',],
 
-        ]);
+        ];
 
-        
+        foreach ($items as $item) {
+            User::create($item);
+        }
     }
 }

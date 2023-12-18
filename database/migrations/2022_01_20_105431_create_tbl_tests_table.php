@@ -14,19 +14,17 @@ class CreateTblTestsTable extends Migration
     public function up()
     {
         Schema::create('tbl_tests', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('course_id')->index();
+            $table->id();
+            $table->foreignId('course_id')->nullable()->constrained('tbl_courses')->cascadeOnDelete();
+            $table->foreignId('lesson_id')->nullable()->constrained('tbl_lessons')->cascadeOnDelete();
             $table->string('title')->nullable();
-            $table->string('slug')->nullable();
-            $table->string('embed_id')->nullable();
-            $table->text('short_text')->nullable();
-            $table->text('full_text')->nullable();
-            $table->integer('position')->nullable()->unsigned();
-            $table->tinyInteger('free_lesson')->nullable()->default(0);
+            $table->text('description')->nullable();
             $table->tinyInteger('published')->nullable()->default(0);
+
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('course_id')->references('id')->on('tbl_courses')->onDelete('cascade');
+
+            $table->index(['deleted_at']);
         });
     }
 
@@ -37,6 +35,6 @@ class CreateTblTestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_tests');
+        Schema::dropIfExists('tests');
     }
 }

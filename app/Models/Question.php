@@ -10,7 +10,9 @@ class Question extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $fillable = ['id', 'created_at', 'updated_at'];
+    protected $table = 'tbl_questions';
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function options()
     {
@@ -19,7 +21,7 @@ class Question extends Model
 
     public function tests()
     {
-        return $this->belongsToMany(Test::class, 'question_test');
+        return $this->belongsToMany(Test::class, 'tbl_question_test');
     }
 
 }

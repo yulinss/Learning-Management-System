@@ -25,25 +25,26 @@ class AuthServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-{
-    $this->registerPolicies();
+    {
+        $this->registerPolicies();
 
-    if (! app()->runningInConsole()) {
-        $roles = Role::with('permission')->get();
+        $user = Auth::user();
 
-        $permissionArray = [];
+        
+        if (! app()->runningInConsole()) {
+            $roles = Role::with('permission')->get();
 
-        foreach ($roles as $role) {
-            foreach ($role->permission as $permission) {
-                $permissionArray[$permission->title][] = $role->id;
+            foreach ($roles as $role) {
+                foreach ($role->permission as $permission) {
+                    $permissionArray[$permission->title][] = $role->id;
+                }
+            }
+
+            foreach ($permissionArray as $title => $roles) {
+                Gate::define($title, function (User $user) use ($roles) {
+                    return count(array_intersect($user->role->pluck('id')->toArray(), $roles));
+                });
             }
         }
-
-        foreach ($permissionArray as $title => $roles) {
-            Gate::define($title, function (User $user) use ($roles) {
-                return count(array_intersect($user->roles->pluck('id')->toArray(), $roles)) > 0;
-            });
-        }
     }
-}
 }

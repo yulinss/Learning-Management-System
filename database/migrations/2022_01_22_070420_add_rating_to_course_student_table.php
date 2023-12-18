@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblPasswordResetsTable extends Migration
+class AddRatingToCourseStudentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateTblPasswordResetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+        Schema::table('tbl_course_student', function (Blueprint $table) {
+            $table->integer('rating')->unsigned()->default(0)->after('user_id');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateTblPasswordResetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_password_resets');
+        Schema::table('course_student', function (Blueprint $table) {
+            //
+        });
     }
 }

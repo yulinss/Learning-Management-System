@@ -10,7 +10,9 @@ class QuestionOption extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $fillable = ['id', 'created_at', 'updated_at'];
+    protected $table = 'tbl_question_options';
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function question(){
         return $this->belongsTo(Question::class);

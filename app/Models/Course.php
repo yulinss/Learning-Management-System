@@ -12,6 +12,7 @@ class Course extends Model
     use HasFactory,SoftDeletes;
 
     protected $table = 'tbl_courses';
+
     protected $fillable = [
         'title',
         'slug',
@@ -23,7 +24,7 @@ class Course extends Model
     ];
 
     public function teachers(){
-        return $this->belongsToMany(User::class, 'course_user');
+        return $this->belongsToMany(User::class, 'tbl_course_user');
     }
 
     public function getPublishedAttribute($attribute){
@@ -50,7 +51,7 @@ class Course extends Model
 
     public function students()
     {
-        return $this->belongsToMany(User::class, 'course_student')->withTimestamps()->withPivot(['rating']);;
+        return $this->belongsToMany(User::class, 'tbl_course_student')->withTimestamps()->withPivot(['rating']);;
     }
 
     public function lessons()
@@ -60,7 +61,7 @@ class Course extends Model
 
     public function getRatingAttribute()
     {
-        return number_format(DB::table('course_student')->where('course_id', $this->attributes['id'])->average('rating'), 2);
+        return number_format(DB::table('tbl_course_student')->where('course_id', $this->attributes['id'])->average('rating'), 2);
     }
 
 

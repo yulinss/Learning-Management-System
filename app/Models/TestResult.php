@@ -9,6 +9,8 @@ class TestResult extends Model
 {
     use HasFactory;
 
+    protected $table = 'tbl_test_results';
+
     protected $fillable = ['test_id', 'user_id', 'test_result'];
 
     public function answers()

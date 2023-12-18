@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblQuestionsTable extends Migration
+class CreatePermissionRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateTblQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_questions', function (Blueprint $table) {
+        Schema::create('permission_role', function (Blueprint $table) {
             $table->id();
-            $table->text('question');
-            $table->string('question_image')->nullable();
-            $table->integer('score')->nullable();
+            $table->foreignId('permission_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('role_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
-            $table->softDeletes();
-
-            $table->index(['deleted_at']);
         });
     }
 
@@ -32,6 +28,6 @@ class CreateTblQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('questions');
+        Schema::dropIfExists('permission_role');
     }
 }

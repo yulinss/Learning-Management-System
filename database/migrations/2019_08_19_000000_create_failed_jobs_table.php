@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblFailedJobsTable extends Migration
+class CreateFailedJobsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTblFailedJobsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_failed_jobs', function (Blueprint $table) {
+        Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('uuid')->unique();
             $table->text('connection');
@@ -31,6 +31,6 @@ class CreateTblFailedJobsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_failed_jobs');
+        Schema::dropIfExists('failed_jobs');
     }
 }

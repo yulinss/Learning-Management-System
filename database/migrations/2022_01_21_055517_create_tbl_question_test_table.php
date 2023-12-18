@@ -14,12 +14,10 @@ class CreateTblQuestionTestTable extends Migration
     public function up()
     {
         Schema::create('tbl_question_test', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('question_id')->nullable();
-            $table->unsignedBigInteger('test_id')->nullable();
+            $table->id();
+            $table->foreignId('question_id')->nullable()->constrained('tbl_questions')->cascadeOnDelete();
+            $table->foreignId('test_id')->nullable()->constrained('tbl_tests')->cascadeOnDelete();
             $table->timestamps();
-            $table->foreign('question_id')->references('id')->on('tbl_questions')->onDelete('cascade');
-            $table->foreign('test_id')->references('id')->on('tbl_tests')->onDelete('cascade');
         });
     }
 
@@ -30,6 +28,6 @@ class CreateTblQuestionTestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_question_test');
+        Schema::dropIfExists('question_test');
     }
 }

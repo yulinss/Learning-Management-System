@@ -9,11 +9,10 @@ class Role extends Model
 {
     use HasFactory;
 
-    protected $table = "tbl_roles";
-    protected $fillable = ['id', 'title',];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function permission()
     {
-        return $this->belongsToMany(Permission::class, 'tbl_permission_roles');
+        return $this->belongsToMany(Permission::class, 'permission_role');
     }
 }

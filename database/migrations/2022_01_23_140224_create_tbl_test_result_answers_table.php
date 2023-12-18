@@ -14,15 +14,12 @@ class CreateTblTestResultAnswersTable extends Migration
     public function up()
     {
         Schema::create('tbl_test_result_answers', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('test_result_id')->nullable();
-            $table->unsignedBigInteger('question_id')->nullable();
-            $table->unsignedBigInteger('question_option_id')->nullable();
+            $table->id();
+            $table->foreignId('test_result_id')->nullable()->constrained('tbl_test_results')->cascadeOnDelete();
+            $table->foreignId('question_id')->nullable()->constrained('tbl_questions')->cascadeOnDelete();
+            $table->foreignId('question_option_id')->nullable()->constrained('tbl_question_options')->cascadeOnDelete();
             $table->tinyInteger('correct')->default(0);
             $table->timestamps();
-            $table->foreign('test_result_id')->references('id')->on('tbl_test_results')->onDelete('cascade');
-            $table->foreign('question_id')->references('id')->on('tbl_questions')->onDelete('cascade');
-            $table->foreign('question_option_id')->references('id')->on('tbl_question_options')->onDelete('cascade');
         });
     }
 
@@ -33,6 +30,6 @@ class CreateTblTestResultAnswersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_test_result_answers');
+        Schema::dropIfExists('test_result_answers');
     }
 }

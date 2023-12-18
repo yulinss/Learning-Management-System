@@ -10,13 +10,15 @@ class Test extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $fillable = ['id', 'created_at', 'updated_at'];
+    protected $table = 'tbl_tests';
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function course()
     {
         return $this->belongsTo(Course::class, 'course_id')->withTrashed();
     }
-    
+
     public function lesson()
     {
         return $this->belongsTo(Lesson::class, 'lesson_id')->withTrashed();
@@ -24,7 +26,7 @@ class Test extends Model
 
     public function questions()
     {
-        return $this->belongsToMany(Question::class, 'question_test');
+        return $this->belongsToMany(Question::class, 'tbl_question_test');
     }
-    
+
 }

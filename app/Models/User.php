@@ -17,8 +17,6 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $table = 'tbl_penggunans';
-
     protected $fillable = [
         'name',
         'email',
@@ -56,7 +54,7 @@ class User extends Authenticatable
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class, 'lesson_student');
+        return $this->belongsToMany(Lesson::class, 'tbl_lesson_student');
     }
-    
+
 }

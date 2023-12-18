@@ -14,13 +14,9 @@ class CreateTblTestResultsTable extends Migration
     public function up()
     {
         Schema::create('tbl_test_results', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('test_id')->nullable();
-            $table->foreign('test_id')->references('id')->on('tbl_tests')->onDelete('cascade');
-            
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('tbl_penggunans')->onDelete('cascade');
-            
+            $table->id();
+            $table->foreignId('test_id')->nullable()->constrained('tbl_tests')->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnDelete();
             $table->integer('test_result');
             $table->timestamps();
         });
@@ -33,6 +29,6 @@ class CreateTblTestResultsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_test_results');
+        Schema::dropIfExists('test_results');
     }
 }

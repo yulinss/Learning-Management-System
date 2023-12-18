@@ -22,6 +22,12 @@ class UserPivotSeeder extends Seeder
 
         ];
 
-        
+        foreach ($items as $id => $item) {
+            $user = User::find($id);
+
+            foreach ($item as $key => $ids) {
+                $user->{$key}()->sync($ids);
+            }
+        }
     }
 }
