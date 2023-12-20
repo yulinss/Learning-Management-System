@@ -37,7 +37,7 @@
               @if(auth()->user()->isAdmin())
                 <li class="nav-item">
                   <a href="{{ route('admin.courses.index') }}" class="nav-link">Admin</a>
-                </li> 
+                </li>
               @endif
             @endauth
           </ul>
@@ -66,7 +66,7 @@
             </ul>
          @endauth
 
-         @guest 
+         @guest
          <ul class="nav-list nav-account" style="margin-top: 1rem">
                 <li class="nav-item" style="width: 100%; text-align: center">
                 <a
