@@ -113,11 +113,10 @@
                   <i class="bx bxs-quote-alt-left"></i>
                 </div>
                 <p class="testimonial-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                  labore reiciendis laboriosam quos at eum, sed sequi tempore
-                  perspiciatis magnam iste quas sit minima provident!
+                Sangat mengesankan! Aplikasi ini dilengkapi dengan fitur-fitur canggih yang mendukung pembelajaran online. 
+                Saya suka banyaknya opsi yang tersedia.
                 </p>
-                <h3 class="testimonial-date">Desember 27, 2023</h3>
+                <h3 class="testimonial-date"> 4 April 2022</h3>
 
                 <div class="testimonial-profile" style="justify-content: center;flex-direction: column;row-gap: 1.4rem;">
                   <img
@@ -127,7 +126,7 @@
                   />
 
                   <div class="testimonial-profile-data">
-                    <span class="testimonial-profile-name">John Doe</span>
+                    <span class="testimonial-profile-name">Bagas Setiawan</span>
                     <span class="testimonial-profile-detail"
                       >Director of a Company</span
                     >
@@ -139,21 +138,20 @@
                   <i class="bx bxs-quote-alt-left"></i>
                 </div>
                 <p class="testimonial-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                  labore reiciendis laboriosam quos at eum, sed sequi tempore
-                  perspiciatis magnam iste quas sit minima provident!
+                Pengembang secara konsisten memberikan pembaruan,
+                 tetapi beberapa perbaikan kecil masih diperlukan untuk meningkatkan stabilitas aplikasi.
                 </p>
-                <h3 class="testimonial-date">Desember 27, 2023</h3>
+                <h3 class="testimonial-date"> 8 Juli 2023</h3>
 
                 <div class="testimonial-profile" style="justify-content: center;flex-direction: column;row-gap: 1.4rem;">
                   <img
-                    src="{{ asset('frontend/assets/images/testimonial1.jpg') }}"
+                    src="{{ asset('frontend/assets/images/testimonial2.jpg') }}"
                     alt=""
                     class="testimonial-profile-img"
                   />
 
                   <div class="testimonial-profile-data">
-                    <span class="testimonial-profile-name">John Doe</span>
+                    <span class="testimonial-profile-name">Sintya Amara</span>
                     <span class="testimonial-profile-detail"
                       >Director of a Company</span
                     >
@@ -165,21 +163,20 @@
                   <i class="bx bxs-quote-alt-left"></i>
                 </div>
                 <p class="testimonial-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                  labore reiciendis laboriosam quos at eum, sed sequi tempore
-                  perspiciatis magnam iste quas sit minima provident!
+                Meskipun tingkat keamanan cukup tinggi, 
+                beberapa tambahan lapisan keamanan akan membuat saya lebih percaya diri dalam berbagi informasi pribadi.
                 </p>
-                <h3 class="testimonial-date">Desember 27, 2023</h3>
+                <h3 class="testimonial-date">10 Agustus 2023</h3>
 
                 <div class="testimonial-profile" style="justify-content: center;flex-direction: column;row-gap: 1.4rem;">
                   <img
-                    src="{{ asset('frontend/assets/images/testimonial1.jpg') }}"
+                    src="{{ asset('frontend/assets/images/testimonial3.jpeg') }}"
                     alt=""
                     class="testimonial-profile-img"
                   />
 
                   <div class="testimonial-profile-data">
-                    <span class="testimonial-profile-name">John Doe</span>
+                    <span class="testimonial-profile-name">Dafit Maulana</span>
                     <span class="testimonial-profile-detail"
                       >Director of a Company</span
                     >

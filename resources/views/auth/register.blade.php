@@ -61,13 +61,13 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="mb-0 row d-flex justify-content-center">
+                            <div class="col-md-6 text-center"> 
+                                <button type="submit" class="btn btn-block" style="background-color: blue; color: white; width: 50%;"> 
                                     {{ __('Register') }}
                                 </button>
                             </div>
-                        </div>
+                        </div>
                     </form>
                 </div>
             </div>
