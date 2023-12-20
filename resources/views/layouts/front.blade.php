@@ -22,7 +22,7 @@
     <header class="header" id="header">
       <div class="nav container">
         <a href="{{ route('home') }}" class="nav-logo">
-        <i class='bx bx-compass'></i> BERAJAH
+        <i class='bx bx-time'></i> BERAJAH
         </a>
 
         <div class="nav-menu" id="nav-menu">
@@ -134,7 +134,7 @@
           <h3 class="footer-title">Our Information</h3>
           <ul class="footer-list">
             <li>123456789</li>
-            <li>Lombok, INDONESIA</li>
+            <li>Jakarta, INDONESIA</li>
           </ul>
         </div>
 
@@ -142,13 +142,13 @@
           <h3 class="footer-title">Menu</h3>
           <ul class="footer-links">
             <li>
-              <a href="#" class="footer-link">home</a>
+              <a href="#" class="footer-link">Home</a>
             </li>
             <li>
-              <a href="#" class="footer-link">course</a>
+              <a href="#" class="footer-link">Course</a>
             </li>
             <li>
-              <a href="#" class="footer-link">categories</a>
+              <a href="#" class="footer-link">Categories</a>
             </li>
           </ul>
         </div>
@@ -157,13 +157,13 @@
           <h3 class="footer-title">Account</h3>
           <ul class="footer-links">
             <li>
-              <a href="#" class="footer-link">register</a>
+              <a href="#" class="footer-link">Register</a>
             </li>
             <li>
-              <a href="#" class="footer-link">login</a>
+              <a href="#" class="footer-link">Login</a>
             </li>
             <li>
-              <a href="#" class="footer-link">faq</a>
+              <a href="#" class="footer-link">Faq</a>
             </li>
           </ul>
         </div>
@@ -184,7 +184,7 @@
         </div>
       </div>
 
-      <span class="footer-copy">&#169; Abdul Aziz. All rights</span>
+      <span class="footer-copy">&#169; TEAM FIVE. All rights</span>
     </footer>
 
     <a href="#" class="scroll-up" id="scroll-up">

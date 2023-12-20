@@ -4,12 +4,12 @@
     --header-height: 3.5rem;
 
     /* colors */
-    --first-color: #fbcaff;
-    --button-color: #ff008e;
-    --button-color-alt: #eb0884;
+    --first-color: #d4e2ff;
+    --button-color: #5255ff;
+    --button-color-alt: #6b98f8;
     --title-color: hsl(0, 0%, 15%);
-    --text-color: hsl(0, 0%, 35%);
-    --text-color-alt: hsl(0, 0%, 55%);
+    --text-color: hsl(0, 0%, 50%);
+    --text-color-alt: hsl(0, 3%, 54%);
     --body-color: hsl(0, 0%, 98%);
     --container-color: #fff;
     --border-color: hsl(0, 0%, 94%);
@@ -136,10 +136,10 @@ button {
 
 body.dark-theme {
     --first-color: #fbcaff;
-    --button-color: #ff008e;
-    --button-color-alt: #eb0884;
+    --button-color: #5255ff;
+    --button-color-alt: #6b98f8;
     --title-color: hsl(0, 0%, 95%);
-    --text-color: hsl(0, 0%, 75%);
+    --text-color: hsl(0, 0%, 99%);
     --body-color: hsl(0, 0%, 12%);
     --container-color: hsl(0, 0%, 16%);
     --border-color: hsl(0, 0%, 20%);
@@ -337,10 +337,10 @@ body.dark-theme {
     background-image: url("./images/home-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -300px;
+    background-position: -380px;
     background-color: var(--first-color);
-    width: 258px;
-    height: 430px;
+    width: 250px;
+    height: 500px;
     padding-bottom: 2rem;
     display: flex;
     align-items: flex-end;
@@ -390,12 +390,12 @@ body.dark-theme {
 }
 
 .btn-gray {
-    background-color: hsl(0, 0%, 75%);
+    background-color: hsl(234, 100%, 80%);
     color: var(--title-color);
 }
 
 .btn-gray:hover {
-    background-color: hsl(0, 0%, 65%);
+    background-color: hsl(194, 100%, 93%);
 }
 
 .btn-small {
@@ -774,7 +774,7 @@ body.dark-theme {
 
 /* newsletter style */
 .newsletter-bg {
-    background-color: var(--first-color);
+    background-color: white;
     padding: 3rem 1.5rem;
     text-align: center;
     row-gap: 2.5rem;
