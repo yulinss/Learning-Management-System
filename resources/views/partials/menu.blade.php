@@ -2,14 +2,14 @@
     <nav class="sidebar-nav">
 
         <ul class="nav">
+            {{-- @can('dashboard_access') --}}
             <li class="nav-item">
-                <a href="" class="nav-link">
-                    <i class="nav-icon fas fa-fw fa-tachometer-alt">
-
-                    </i>
+                <a href="{{ route('admin.dashboard.index') }}" class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-fw fa-tachometer-alt"></i>
                     Dashboard
                 </a>
             </li>
+            {{-- @endcan --}}
             @can('course_access')
             <li class="nav-item">
                 <a href="{{ route('admin.courses.index') }}" class="nav-link {{ request()->is('admin/courses') || request()->is('admin/courses/*') ? 'active' : '' }}">
@@ -66,7 +66,7 @@
                     Logout
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="post">
-                    @csrf 
+                    @csrf
                 </form>
             </li>
         </ul>

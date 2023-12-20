@@ -49,37 +49,12 @@
                     </div>
                 </li>
             @endif
-
-
         </ul>
     </header>
 
-    <div class="app-body">
+       <div class="app-body">
         @include('partials.menu')
         <main class="main">
-
-
-            <div style="padding-top: 20px" class="container-fluid">
-                @if(session('message'))
-                    <div class="row mb-2">
-                        <div class="col-lg-12">
-                            <div class="alert alert-success" role="alert">{{ session('message') }}</div>
-                        </div>
-                    </div>
-                @endif
-                @if($errors->count() > 0)
-                    <div class="alert alert-danger">
-                        <ul class="list-unstyled">
-                            @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                @yield('content')
-
-            </div>
-
 
         </main>
         <form id="logoutform" action="" method="POST" style="display: none;">
