@@ -22,6 +22,7 @@ class CourseController extends Controller
             return abort(401);
         }
 
+
         if (request('show_deleted') == 1) {
             if (! Gate::allows('course_delete')) {
                 return abort(401);
@@ -178,4 +179,5 @@ class CourseController extends Controller
 
         return redirect()->route('admin.courses.index');
     }
+    
 }
