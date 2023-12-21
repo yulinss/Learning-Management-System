@@ -53,21 +53,17 @@
         </ul>
     </header>
 
+        @extends('layouts.admin')
+        @section('content')
+
        <div class="app-body">
-        @include('partials.menu')
         <main class="main">
-
-            @extends('layouts.app')
-
-            @section('content')
-
-    
 
     <section class="section dashboard">
         <div class="row">
 
             <!-- Left side columns -->
-            <<div class="col-lg-8 mx-auto px-3"> 
+            <div class="col-lg-12 ml-0">
                 <div class="row">
 
                     <!-- Student -->
@@ -262,15 +258,16 @@
                     </div><!-- End Top Selling -->
 
                     <!-- Right side columns -->
-            <div class="col-lg-4">
+            <div class="col-lg-12">
 
-            <div class="row">
-            <div class="col-md-6 d-flex flex-column">
-                <!-- Recent Activity -->
-                <div class="card h-100 w-100">
-                    <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <div class="container mt-5">
+                <div class="row d-flex">
+                    <div class="col-md-6">
+                        <!-- Recent Activity -->
+                            <div class="card">
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <li class="dropdown-header text-start">
                                 <h6>Filter</h6>
                             </li>
@@ -358,15 +355,7 @@
                 </div>
             </div>
             </div>    
-            </div><!-- End Left side columns -->
-
-        
-
-                
-
-                
-
-                
+            </div><!-- End Left side columns -->  
 
             </div><!-- End Right side columns -->
 
