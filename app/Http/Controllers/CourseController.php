@@ -47,4 +47,8 @@ class CourseController extends Controller
 
         return redirect()->back()->with('success', 'Thank you for rating.');
     }
+
+
+   
 }
+

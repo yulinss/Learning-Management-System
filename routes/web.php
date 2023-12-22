@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Auth::routes();
+Route::get('/dashboard', function() {
+    return view('dashboard.index');
+})->middleware('auth');
 
 Route::group(['middleware' => ['isAdmin'],'prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::resource('dashboard', \App\Http\Controllers\Admin\DashboardController::class);
@@ -55,6 +58,4 @@ Route::post('course/{course_id}/rating', [App\Http\Controllers\CourseController:
 Route::get('lessons/{course_id}/{slug}', [App\Http\Controllers\LessonController::class, 'show'])->name('lessons.show');
 Route::post('lesson/{slug}/test', [App\Http\Controllers\LessonController::class, 'test'])->name('lessons.test');
 
-Route::get('/dashboard', function() {
-    return view('dashboard.index');
-})->middleware('auth');
+
