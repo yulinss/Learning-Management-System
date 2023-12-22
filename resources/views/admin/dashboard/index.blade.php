@@ -21,6 +21,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/dist/css/bootstrap-icons.min.css" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
 </head>
 
@@ -56,14 +57,15 @@
         @extends('layouts.admin')
         @section('content')
 
-       <div class="app-body">
-        <main class="main">
+       <div class="app-body mt-0">
+        <main class="main ml-0">
 
     <section class="section dashboard">
         <div class="row">
+        <h3 class="ml-4">Dashboard</h3>
 
             <!-- Left side columns -->
-            <div class="col-lg-12 ml-0">
+            <div class="col-lg-12 ml-auto">
                 <div class="row">
 
                     <!-- Student -->
@@ -75,18 +77,18 @@
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-cart"></i>
+                                        <i class="bi bi-person"></i>
                                     </div>
                                     <div class="ps-3">
                                         <span class="text-success small pt-1 fw-bold">78</span> <span
                                             class="text-muted small pt-2 ps-1">student(s)</span>
-
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                     </div><!-- End Student -->
+
 
                     <!-- Course -->
                     <div class="col-xxl-4 col-md-6">
@@ -255,10 +257,10 @@
                             </div>
 
                         </div>
-                    </div><!-- End Top Selling -->
+                </div><!-- End Top Selling -->
 
                     <!-- Right side columns -->
-            <div class="col-lg-12">
+            <div class="col-lg-12 ml-auto">
 
             <div class="container mt-5">
                 <div class="row d-flex">
