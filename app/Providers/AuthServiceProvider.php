@@ -28,20 +28,21 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        $user = Auth::user();
+
+        
         if (! app()->runningInConsole()) {
-            // Mendapatkan roles dan permission dari database
-            $roles = Role::with('permissions')->get();
+            $roles = Role::with('permission')->get();
 
             foreach ($roles as $role) {
-                foreach ($role->permissions as $permission) {
+                foreach ($role->permission as $permission) {
                     $permissionArray[$permission->title][] = $role->id;
                 }
             }
 
-            // Mendefinisikan Gate untuk setiap permission
             foreach ($permissionArray as $title => $roles) {
                 Gate::define($title, function (User $user) use ($roles) {
-                    return count(array_intersect($user->roles->pluck('id')->toArray(), $roles)) > 0;
+                    return count(array_intersect($user->role->pluck('id')->toArray(), $roles));
                 });
             }
         }
