@@ -30,7 +30,7 @@ class CourseController extends Controller
             $courses = Course::onlyTrashed()->ofTeacher()->get();
         } else {
             $courses = Course::ofTeacher()->get();
-        }    
+        }
 
         return view('admin.courses.index', compact('courses'));
     }
@@ -46,8 +46,8 @@ class CourseController extends Controller
             return abort(401);
         }
 
-        $teachers = User::whereHas('role', function ($q) { 
-                $q->where('role_id', 2); 
+        $teachers = User::whereHas('role', function ($q) {
+                $q->where('role_id', 2);
             })
             ->get()
             ->pluck('name', 'id');
@@ -93,8 +93,8 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        $teachers = User::whereHas('role', function ($q) { 
-            $q->where('role_id', 2); 
+        $teachers = User::whereHas('role', function ($q) {
+            $q->where('role_id', 2);
         })
         ->get()
         ->pluck('name', 'id');
@@ -118,8 +118,8 @@ class CourseController extends Controller
             $data['course_image'] = $request->file('course_image')->store(
                 'images/courses', 'public'
             );
-        }       
-        
+        }
+
         $course->update($data);
         $teachers = auth()->user()->isAdmin() ? array_filter((array)$request->input('teachers')) : [auth()->id()];
         $course->teachers()->sync($teachers);
@@ -135,9 +135,9 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        if (! Gate::allows('course_delete')) {
-            return abort(401);
-        }
+        // if (! Gate::allows('course_delete')) {
+        //     return abort(401);
+        // }
 
         $course->delete();
 
