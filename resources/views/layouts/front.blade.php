@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
 
+    <!-- Sweet Alert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
     <!-- swiper css -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/libraries/swiper.css') }}" />
 
@@ -191,6 +193,8 @@
       <i class="bx bx-up-arrow-alt scroll-up-icon"></i>
     </a>
 
+    <!-- Sweet Alert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- swiper -->
     <script src="{{ asset('frontend/assets/libraries/swiper.js') }}"></script>
     <!--===== MAIN JS =====-->

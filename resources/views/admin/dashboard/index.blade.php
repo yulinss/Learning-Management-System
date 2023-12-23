@@ -102,14 +102,8 @@
                                         <i class="bi bi-currency-dollar"></i>
                                     </div>
                                     <div class="ps-3">
-<<<<<<< Updated upstream
                                         <span class="text-success small pt-1 fw-bold">{{ $totalCourses }}</span>
                                         <span class="text-muted small pt-2 ps-1">course(s)</span>
-=======
-                                        <span class="text-success small pt-1 fw-bold">5</span> <span
-                                            class="text-muted small pt-2 ps-1">course(s)</span>
-
->>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +259,6 @@
                         </div>
                 </div><!-- End Top Selling -->
 
-<<<<<<< Updated upstream
                     <!-- Right side columns -->
             <div class="col-lg-12 ml-auto">
 
@@ -277,23 +270,20 @@
                                 <div class="filter">
                                     <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-=======
                 </div>
             </div><!-- End Left side columns --> --}}
 
             <!-- Right side columns -->
-            <div class="col-lg-4">
+            <div class="col-lg-10 ml-0">
 
                 <!-- Recent Activity -->
                 {{-- <div class="card">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
->>>>>>> Stashed changes
                             <li class="dropdown-header text-start">
                                 <h6>Filter</h6>
                             </li>
-
                             <li><a class="dropdown-item" href="#">Today</a></li>
                             <li><a class="dropdown-item" href="#">This Month</a></li>
                             <li><a class="dropdown-item" href="#">This Year</a></li>
@@ -334,12 +324,10 @@
                         </div>
 
                     </div>
-<<<<<<< Updated upstream
+
                 </div><!-- End Recent Activity -->
             </div>
-=======
                 </div><!-- End Recent Activity --> --}}
->>>>>>> Stashed changes
 
             <div class="col-md-6 d-flex flex-column">
                 <!-- News & Updates Traffic -->
