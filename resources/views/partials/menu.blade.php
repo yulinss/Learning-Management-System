@@ -13,7 +13,7 @@
             @can('course_access')
             <li class="nav-item">
                 <a href="{{ route('admin.courses.index') }}" class="nav-link {{ request()->is('admin/courses') || request()->is('admin/courses/*') ? 'active' : '' }}">
-                    <i class="fas fa-gift nav-icon"></i>
+                    <i class="fas fa-book nav-icon"></i>
                     Courses
                 </a>
             </li>
@@ -21,7 +21,7 @@
             @can('lesson_access')
             <li class="nav-item">
                 <a href="{{ route('admin.lessons.index') }}" class="nav-link {{ request()->is('admin/lessons') || request()->is('admin/lessons/*') ? 'active' : '' }}">
-                    <i class="fas fa-gift nav-icon"></i>
+                    <i class="fas fa-chalkboard nav-icon"></i>
                     Lesson
                 </a>
             </li>
@@ -29,7 +29,7 @@
             @can('test_access')
             <li class="nav-item">
                 <a href="{{ route('admin.tests.index') }}" class="nav-link {{ request()->is('admin/tests') || request()->is('admin/tests/*') ? 'active' : '' }}">
-                    <i class="fas fa-gift nav-icon"></i>
+                    <i class="fas fa-check-square nav-icon"></i>
                     Test
                 </a>
             </li>
@@ -37,7 +37,7 @@
             @can('question_access')
             <li class="nav-item">
                 <a href="{{ route('admin.questions.index') }}" class="nav-link {{ request()->is('admin/questions') || request()->is('admin/questions/*') ? 'active' : '' }}">
-                    <i class="fas fa-gift nav-icon"></i>
+                    <i class="fas fa-question-circle nav-icon"></i>
                     Question
                 </a>
             </li>
@@ -45,7 +45,7 @@
             @can('questions_option_access')
             <li class="nav-item">
                 <a href="{{ route('admin.question_options.index') }}" class="nav-link {{ request()->is('admin/question_options') || request()->is('admin/question_options/*') ? 'active' : '' }}">
-                    <i class="fas fa-gift nav-icon"></i>
+                    <i class="fas fa-list-alt nav-icon"></i>
                     Question Option
                 </a>
             </li>
@@ -53,7 +53,7 @@
             @can('user_access')
             <li class="nav-item">
                 <a href="{{ route('admin.users.index') }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
-                    <i class="fas fa-gift nav-icon"></i>
+                    <i class="fas fa-users nav-icon"></i>
                     User
                 </a>
             </li>
