@@ -270,10 +270,23 @@
                                 <div class="filter">
                                     <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+<<<<<<< HEAD
+=======
+                </div>
+            </div><!-- End Left side columns --> --}}
+
+            <!-- Right side columns -->
+            <div class="col-lg-10 ml-0">
+
+                <!-- Recent Activity -->
+                {{-- <div class="card">
+                    <div class="filter">
+                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+>>>>>>> 46df31b0cf79e018856285d0081dae8acb624ec0
                             <li class="dropdown-header text-start">
                                 <h6>Filter</h6>
                             </li>
-
                             <li><a class="dropdown-item" href="#">Today</a></li>
                             <li><a class="dropdown-item" href="#">This Month</a></li>
                             <li><a class="dropdown-item" href="#">This Year</a></li>
@@ -314,8 +327,15 @@
                         </div>
 
                     </div>
+<<<<<<< HEAD
                 </div><!-- End Recent Activity -->
             </div>
+=======
+
+                </div><!-- End Recent Activity -->
+            </div>
+                </div><!-- End Recent Activity --> --}}
+>>>>>>> 46df31b0cf79e018856285d0081dae8acb624ec0
 
             <div class="col-md-6 d-flex flex-column">
                 <!-- News & Updates Traffic -->

@@ -206,14 +206,37 @@
             </p>
           </div>
 
-          <form action="" class="newsletter-subscribe">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="newsletter-input"
-            />
-            <button class="button">BUTTON</button>
+          <!-- Modifikasi formulir dengan menambahkan event listener -->
+          <form action="" class="newsletter-subscribe" id="newsletterForm" onsubmit="handleFormSubmission(event)">
+              <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="newsletter-input"
+              />
+              <button type="submit" class="button">SEND</button>
           </form>
         </div>
       </section>
+
+      <script>
+    function showSweetAlert() {
+        Swal.fire({
+            title: 'Thank You!',
+            text: 'You have subscribed to our newsletter.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed) {
+                Swal.close();
+            }
+        });
+    }
+
+    function handleFormSubmission(event) {
+        event.preventDefault();
+
+        showSweetAlert();
+    }
+</script>
+
 @endsection
