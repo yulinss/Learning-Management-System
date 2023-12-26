@@ -71,45 +71,43 @@
                     <!-- Student -->
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
-
                             <div class="card-body">
-                                <h5 class="card-title">Student(s)</h5>
-
                                 <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-person"></i>
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="flex: 0 0 75px;">
+                                        <i class="fas fa-users nav-icon fa-2x"></i>
                                     </div>
-                                    <div class="ps-3">
-                                        <span class="text-success small pt-1 fw-bold">78</span> <span
-                                            class="text-muted small pt-2 ps-1">student(s)</span>
+                                    <div class="ps-3" style="flex: 1;">
+                                        <h5 class="card-title">
+                                            78 <br>
+                                            <span class="text-success small pt-1 fw-bold">Student(s)</span>
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div><!-- End Student -->
+
 
 
                     <!-- Course -->
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card revenue-card">
-
                             <div class="card-body">
-                                <h5 class="card-title">Course(s)</h5>
-
                                 <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-currency-dollar"></i>
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center" style="flex: 0 0 75px;">
+                                        <i class="fas fa-graduation-cap nav-icon fa-2x"></i>
                                     </div>
-                                    <div class="ps-3">
-                                        <span class="text-success small pt-1 fw-bold">{{ $totalCourses }}</span>
-                                        <span class="text-muted small pt-2 ps-1">course(s)</span>
+                                    <div class="ps-3" style="flex: 1;">
+                                        <h5 class="card-title">
+                                            {{ $totalCourses }} <br>
+                                            <span class="text-success small pt-1 fw-bold">Course(s)</span>
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div><!-- End Course -->
+
 
 
 
@@ -270,20 +268,17 @@
                                 <div class="filter">
                                     <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-<<<<<<< HEAD
-=======
                 </div>
-            </div><!-- End Left side columns --> --}}
+            </div><!-- End Left side columns -->
 
             <!-- Right side columns -->
-            <div class="col-lg-10 ml-0">
+            <div class="col-lg-50 ml-0">
 
                 <!-- Recent Activity -->
                 {{-- <div class="card">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
->>>>>>> 46df31b0cf79e018856285d0081dae8acb624ec0
                             <li class="dropdown-header text-start">
                                 <h6>Filter</h6>
                             </li>
@@ -327,15 +322,12 @@
                         </div>
 
                     </div>
-<<<<<<< HEAD
                 </div><!-- End Recent Activity -->
             </div>
-=======
 
                 </div><!-- End Recent Activity -->
             </div>
-                </div><!-- End Recent Activity --> --}}
->>>>>>> 46df31b0cf79e018856285d0081dae8acb624ec0
+                </div><!-- End Recent Activity --> 
 
             <div class="col-md-6 d-flex flex-column">
                 <!-- News & Updates Traffic -->
