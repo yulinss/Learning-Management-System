@@ -258,11 +258,11 @@
                 </div><!-- End Top Selling -->
 
                     <!-- Right side columns -->
-            <div class="col-lg-12 ml-auto">
+            <div class="col-lg-12 ml-0">
 
-            <div class="container mt-5">
-                <div class="row d-flex">
-                    <div class="col-md-6">
+            <div class="container mt-0">
+                <div class="row ">
+                    <div class="col-md-5">
                         <!-- Recent Activity -->
                             <div class="card">
                                 <div class="filter">
@@ -272,10 +272,10 @@
             </div><!-- End Left side columns -->
 
             <!-- Right side columns -->
-            <div class="col-lg-50 ml-0">
+            <div class="col-lg-0 ml-0">
 
                 <!-- Recent Activity -->
-                {{-- <div class="card">
+                <div class="card">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -329,7 +329,7 @@
             </div>
                 </div><!-- End Recent Activity --> 
 
-            <div class="col-md-6 d-flex flex-column">
+            <div class="col-md-5 d-flex flex-column">
                 <!-- News & Updates Traffic -->
                 <div class="card flex-grow-1">
                     <div class="filter">
